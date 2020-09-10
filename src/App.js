@@ -1,5 +1,5 @@
 import React from 'react';
-import Stories from './stories/stories.js';
+//import Stories from './stories/stories.js';
 import Contacts from './contacts/contacts.js';
 //import './App.css';
 
