@@ -50,11 +50,16 @@ const contactsMock = [{
         }
 
         render(){
-            let filteredContacts = this.state.contacts.filter(
+            const filteredContacts = this.state.contacts.filter(
                 (user) => {
-                    let a = user.firstName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-                    let b = user.lastName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-                    return a + b;
+                    return (
+                        user.firstName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+                        user.lastName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+                        user.phone.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+                    )
+//                    let a = user.firstName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+//                    let b = user.lastName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+//                    return a + b;
                 }
             );
             return(
